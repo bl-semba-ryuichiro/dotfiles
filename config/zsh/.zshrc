@@ -36,6 +36,18 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 #----------------------------------------------------------------
 
+# ctrl+gでnaviを実行
+eval "$(navi widget zsh)"
+
+# レポジトリからimportするcheat sheetのパス
+export NAVI_PATH="$(navi info cheats-path)"
+
+# ~/.cheats = 自分用かつ横断的なチートシートのパス
+# .cheats = プロジェクト別チートシートのパス(相対パス)
+export NAVI_PATH="~/.cheats:.cheats:$NAVI_PATH"
+
+#----------------------------------------------------------------
+
 # 履歴ファイルの保存先
 HISTFILE=$HOME/.zsh_history
 # メモリに保存される履歴の件数
