@@ -31,6 +31,9 @@ eval "$(zoxide init zsh)"
 # starship
 eval "$(starship init zsh)"
 
+# direnv
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
 #----------------------------------------------------------------
 
 # 履歴ファイルの保存先
